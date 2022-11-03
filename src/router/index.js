@@ -1,6 +1,6 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
-
+import productItem from '../views/productItem.vue'
 
 const routes = [
   {
@@ -46,8 +46,21 @@ const routes = [
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../components/HelloWorld.vue')
-  }
+    component: () => import(/* webpackChunkName: "about" */ '../components/cart.vue')
+  },
+  {
+    path: "/productItem",
+    name: "productItem",
+    component: productItem
+  },
+  {
+    path: '/details/:slug',
+    name: 'details',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "about" */ '../components/cart.vue')
+  },
 ]
 
 const router = createRouter({

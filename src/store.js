@@ -6,7 +6,7 @@ export const store = reactive({
     cartSum: 0,
     isCartOpen: false,
     cartValue: 0,
-
+    productValue: 0,
 
 
 })

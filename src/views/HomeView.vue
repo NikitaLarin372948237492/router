@@ -2,39 +2,25 @@
 
   <head>
     <title>shop</title>
-
   </head>
 
   <body>
-
     <div class="home">
-
-
       <div class="header">
-
-
         <h1 class="site-title">SHOP</h1>
-
-
-        <p class="cart-value-style">{{ store.cartValue }}</p>
-        <img class="cart-style" src="/img/shoppingCart.png" @click="funcs.openCloseCart()" />
-        <div class="cart" v-if="store.isCartOpen">
-          <ul v-if="!store.isCartEmpty">
-            <li v-for="(cartItem, cartKey) in store.cartItems" :key="cartKey">
-              {{ cartItem.name }} {{ cartItem.price }}$
-              <a @click="funcs.deleteCartItem(cartKey)">delete</a>
-            </li>
-          </ul>
-          <p>Total: {{ store.cartSum }}$</p>
-        </div>
+        <router-link to="/cart">
+          <p class="cart-value-style">{{ store.cartValue }}</p>
+          <img class="cart-style" src="/img/shoppingCart.png" />
+        </router-link>
       </div>
       <div class="grid-container">
         <div class="grid-item" v-for="(item, index) in clothes.man" v-bind:key="index">
+          <!-- <router-link :to="{ path: '/details/:name', name: 'manItem', params: { product: item } }">-->
           <img class="image" :src=item.src />
           <p>{{ item.name }}</p>
           <p>{{ item.price }} $</p>
+          <!--</router-link>-->
           <button class="add-to-card" @click="funcs.addCartItem(index, 'man')">Buy</button>
-
         </div>
         <div class="grid-item" v-for="(item, index) in clothes.woman" v-bind:key="index">
           <img class="image" :src=item.src />
@@ -54,15 +40,8 @@
       </div>
     </div>
   </body>
-
 </template>
-
 <script >
-
-
-
-
-
 import { store } from '@/store.js';
 import * as funcs from '@/methods.js';
 import clothes from '@/clothes.json';
@@ -77,11 +56,8 @@ export default {
       clothes,
     };
   },
-
   watch: {},
-
   methods: {
-
   },
 };
 </script>
@@ -253,8 +229,6 @@ table {
   margin-bottom: 12px;
   margin-top: 30px;
   text-align: center;
-
-
 }
 
 .image {
@@ -288,7 +262,6 @@ table {
   max-width: 200px;
   max-height: 100px;
   right: 550px;
-
 }
 
 .cart-value-style {
@@ -300,6 +273,10 @@ table {
   color: darkgrey;
 }
 
+.delete {
+  color: red;
+}
+
 .add-to-card {
   width: 200px;
   height: 32px;
@@ -307,14 +284,12 @@ table {
   background-color: rgb(144, 160, 160);
   color: rgb(255, 255, 255);
   border: none;
-
 }
 
 .wrapf {
   text-align: center;
 }
 </style>
-
 <style lang="scss">
 nav {
   padding: 30px;
@@ -327,6 +302,5 @@ nav {
       color: #42b983;
     }
   }
-
 }
 </style>

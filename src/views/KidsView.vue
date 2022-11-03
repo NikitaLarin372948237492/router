@@ -15,17 +15,19 @@
                     <h1 class="site-title">SHOP</h1>
 
                 </div>
-                <p class="cart-value-style">{{ store.cartValue }}</p>
-                <img class="cart-style" src="/img/shoppingCart.png" @click="funcs.openCloseCart()" />
-                <div class="cart" v-if="store.isCartOpen">
-                    <ul v-if="!store.isCartEmpty">
-                        <li v-for="(cartItem, cartKey) in store.cartItems" :key="cartKey">
-                            {{ cartItem.name }} {{ cartItem.price }}$
-                            <a @click="funcs.deleteCartItem(cartKey)">delete</a>
-                        </li>
-                    </ul>
-                    <p>Total: {{ store.cartSum }}$</p>
-                </div>
+                <router-link to="/cart">
+                    <p class="cart-value-style">{{ store.cartValue }}</p>
+                    <img class="cart-style" src="/img/shoppingCart.png" @click="funcs.openCloseCart()" />
+                    <div class="cart" v-if="store.isCartOpen">
+                        <ul v-if="!store.isCartEmpty">
+                            <li v-for="(cartItem, cartKey) in store.cartItems" :key="cartKey">
+                                {{ cartItem.name }} {{ cartItem.price }}$
+                                <a @click="funcs.deleteCartItem(cartKey)">delete</a>
+                            </li>
+                        </ul>
+                        <p>Total: {{ store.cartSum }}$</p>
+                    </div>
+                </router-link>
             </div>
             <div class="grid-container">
                 <div class="grid-item" v-for="(item, index) in clothes.kids" v-bind:key="index">
