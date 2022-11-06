@@ -25,8 +25,9 @@
                     <li v-for="(cartItem, cartKey) in store.cartItems" :key="cartKey">
                         <img class="cart-img" :src="cartItem.image" />
                         {{ cartItem.name }} {{ cartItem.price }}$
-                        <!--<a @click="funcs.addCartItem(cartKey)">add</a>-->
-                        <a @click="funcs.deleteCartItem(cartKey)">delete</a>
+                        <input type="number" min="1" v-model="store.cartItemsQuantity[cartKey]"
+                            v-on:change="funcs.addAddToCart()" />
+                        <p @click="funcs.deleteCartItem(cartKey)">delete</p>
                     </li>
                 </ul>
                 <p>Total: {{ store.cartSum }}$</p>

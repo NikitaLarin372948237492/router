@@ -11,6 +11,8 @@
     <router-link to="/woman">Woman</router-link>|
     <router-link to="/kids">Kids</router-link>|
     <router-link to="/about">About</router-link>
+
+
   </nav>
   <router-view />
 </template>
