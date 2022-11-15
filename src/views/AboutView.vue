@@ -17,16 +17,7 @@
         </div>
         <router-link to="/cart">
           <p class="cart-value-style">{{ store.cartValue }}</p>
-          <img class="cart-style" src="/img/shoppingCart.png" @click="funcs.openCloseCart()" />
-          <div class="cart" v-if="store.isCartOpen">
-            <ul v-if="!store.isCartEmpty">
-              <li v-for="(cartItem, cartKey) in store.cartItems" :key="cartKey">
-                {{ cartItem.name }} {{ cartItem.price }}$
-                <a @click="funcs.deleteCartItem(cartKey)">delete</a>
-              </li>
-            </ul>
-            <p>Total: {{ store.cartSum }}$</p>
-          </div>
+          <img class="cart-style" src="/img/shoppingCart.png" />
         </router-link>
       </div>
       <p>This is an about page</p>
@@ -36,11 +27,6 @@
         <li><a href="https://cli.vuejs.org/">Link to the Vue CLI</a></li>
       </ol>
       <h1>Site structure</h1>
-      <h1>Те з чого все почалося </h1>
-      <video width="1000" height="640" src="/video/router.mp4" controls> Sorry, your browser doesn't support HTML5
-        <code>video</code>, but you can download this video from the <a
-          href="https://archive.org/details/Popeye_forPresident" target="_blank">Internet Archive</a>. </video>
-
 
       <div class="footer">
         <div class="wrap">shop 2021</div>

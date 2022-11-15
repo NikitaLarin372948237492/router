@@ -48,20 +48,29 @@ const routes = [
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "about" */ '../components/cart.vue')
   },
-
   // {
-  //   path: '/details/:slug',
-  //   name: 'details',
-  //   // route level code-splitting
-  //   // this generates a separate chunk (about.[hash].js) for this route
-  //   // which is lazy-loaded when the route is visited.
-  //   component: () => import(/* webpackChunkName: "about" */ '../components/cart.vue')
+  //   // сопоставляется со всем, начинающимся с `/user-`
+  //   path: '/user-*'
   // },
+  // {
+  //   path: '/user/:item.prodid', component: () => import('@/components/userFile.vue')
+  // }
+
 ]
 
 const router = createRouter({
   history: createWebHashHistory(),
   routes
 })
+
+// const User = {
+//   template: '...',
+//   watch: {
+//     $route(user, home) {
+//       // обрабатываем изменение параметров маршрута...
+//     }
+//   }
+// }
+
 
 export default router

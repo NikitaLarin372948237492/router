@@ -3,78 +3,102 @@
         {
             "prodid": "1",
             "name": "T-shirt Tommy Man",
+            "slug": "t-shirt tommy man",
             "price": 179,
-            "src": "/img/AW22-BLM04R_55X_F1.jpg"
+            "src": "/img/AW22-BLM04R_55X_F1.jpg",
+            "description": "very good T-shirt"
         },
         {
             "prodid": "2",
             "name": "jeans Levi's Man",
+            "slug": "jeans levi's man",
             "price": 169,
-            "src": "/img/07d0c5147b4f46c9bb5268ea06cf.jpg"
+            "src": "/img/07d0c5147b4f46c9bb5268ea06cf.jpg",
+            "description": "great jeans"
         },
         {
             "prodid": "3",
             "name": "jeans Levi's Man",
+            "slug": "jeans levi's man",
             "price": 159,
-            "src": "/img/2eb8a93fb75b5207b141e711647c.jpg"
+            "src": "/img/2eb8a93fb75b5207b141e711647c.jpg",
+            "description": "perfect jeans"
         },
         {
             "prodid": "4",
             "name": "jeans Levi's Man",
+            "slug": "jeans levi's man",
             "price": 149,
-            "src": "/img/AW22-SJM02L_55J_F1.jpg"
+            "src": "/img/AW22-SJM02L_55J_F1.jpg",
+            "description": "good jeans"
         }
     ],
     "woman": [
         {
             "prodid": "1",
             "name": "Shirt quess Woman",
+            "slug": "shirt quess woman",
             "price": 139,
-            "src": "/img/AW22-KDD04H_65A_F1.jpg"
+            "src": "/img/AW22-KDD04H_65A_F1.jpg",
+            "description": "very good shirt"
         },
         {
             "prodid": "2",
             "name": "Blouse Tommy Woman",
+            "slug": "blouse tommy woman",
             "price": 129,
-            "src": "/img/AW22-BLD02H_01X_F1.jpg"
+            "src": "/img/AW22-BLD02H_01X_F1.jpg",
+            "description": "very good blouse"
         },
         {
             "prodid": "3",
             "name": "Dress quess Woman",
+            "slug": "dress quess woman",
             "price": 119,
-            "src": "/img/AW22-SUD0I3_80X_F1.jpg"
+            "src": "/img/AW22-SUD0I3_80X_F1.jpg",
+            "description": "very good dress"
         },
         {
             "prodid": "4",
             "name": "T-shirt Calvin Klein Jeans Woman",
+            "slug": "t-shirt calvin klein jeans woman",
             "price": 109,
-            "src": "/img/AW22-TSD14C_88X_F1.jpg"
+            "src": "/img/AW22-TSD14C_88X_F1.jpg",
+            "description": "good jeans for women"
         }
     ],
     "kids": [
         {
             "prodid": "1",
             "name": "Dress quess Kids",
+            "slug": "dress quess kids ",
             "price": 99,
-            "src": "/img/AW22-KDB004_50X_F1.jpg"
+            "src": "/img/AW22-KDB004_50X_F1.jpg",
+            "description": "good dress "
         },
         {
             "prodid": "2",
             "name": "Dress quess Kids",
+            "slug": "dress quess kids",
             "price": 89,
-            "src": "/img/AW22-SUG02R_03X_F1.jpg"
+            "src": "/img/AW22-SUG02R_03X_F1.jpg",
+            "description": "perfect dress"
         },
         {
             "prodid": "3",
             "name": "Dress quess Kids",
+            "slug": "dress quess kids",
             "price": 79,
-            "src": "/img/AW22-SUG01A_55X_F1.jpg"
+            "src": "/img/AW22-SUG01A_55X_F1.jpg",
+            "description": "the best dress"
         },
         {
             "prodid": "4",
             "name": "Sweater Benetton Kids",
+            "slug": "sweater benetton kids",
             "price": 69,
-            "src": "/img/AW22-BLG03O_48X_F1.jpg"
+            "src": "/img/AW22-BLG03O_48X_F1.jpg",
+            "description": "good sweater"
         }
     ]
 }

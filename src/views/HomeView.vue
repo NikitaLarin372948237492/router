@@ -8,21 +8,7 @@
     <div class="home">
       <div class="header">
         <h1 class="site-title">SHOP</h1>
-        <!--new-->
-        <!--    <h1>All destinations</h1>
-        <div class="destinations">
-          <div v-for="destination in this.store.destinations " :key="destination.name">
-            <router-link to="destination.slug">
-              <h2>{{ destination.name }}</h2>
-            </router-link>
-            <figure>
-              <router-link to="destination.name">
-                <img src="require('@/assets/${destination.image}')" alt="destination.name">
-              </router-link>
-            </figure>
-          </div>
-        </div>-->
-        <!--new-->
+
         <router-link to="/cart">
           <p class="cart-value-style">{{ store.cartValue }}</p>
           <img class="cart-style" src="/img/shoppingCart.png" />
@@ -30,11 +16,13 @@
       </div>
       <div class="grid-container">
         <div class="grid-item" v-for="(item, index) in clothes.man" v-bind:key="index">
-          <!-- <router-link :to="{ path: '/details/:name', name: 'manItem', params: { product: item } }">-->
+
+          <!--<router-link :to="'/user/' + item.prodid">-->
           <img class="image" :src=item.src />
           <p>{{ item.name }}</p>
           <p>{{ item.price }} $</p>
           <!--</router-link>-->
+
           <button class="add-to-card" @click="funcs.addCartItem(index, 'man')">Buy</button>
         </div>
         <div class="grid-item" v-for="(item, index) in clothes.woman" v-bind:key="index">
@@ -73,7 +61,9 @@ export default {
   },
   watch: {},
   methods: {
+
   },
+
 };
 </script>
 <style>
